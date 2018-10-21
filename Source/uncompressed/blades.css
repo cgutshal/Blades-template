@@ -2209,7 +2209,7 @@ input[value="1"] + .sheet-claimbox {
 .sheet-strictures span.sheet-label::after {
   content: ":";
 }
-/* ALCHEMICALS */
+/* alchemicals */
 .sheet-title-checkbox ~ div {
   height: auto;
   transition: all 0.2s;

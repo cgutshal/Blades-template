@@ -8,21 +8,21 @@ This is the main version of this template, still containing all the Blades-speci
 
 ### July 3, 2018
 
-Switched from command line sass to node-sass. This makes installing the required dependencies a bit more intuitive.
+Switched from flow line sass to node-sass. This makes installing the required dependencies a bit more intuitive.
 
 ### June 2, 2018
 
 Apart from bugfixes, some changes made to the Blades sheet were backported to the templated version. Moreover, this template vas reset to internal version number 1.0, since a new sheet really should not start at 2.7. The following innovations of the Blades sheet were backported:
 
-* Friend/contact notes
-* Automatically filling ability description upon entering names
-* Character picture on chat rolls
-* Pre-calculated number of dice
-* Restyled repeating section controls to use symbols instead of text
+- Friend/contact notes
+- Automatically filling ability description upon entering names
+- Character picture on chat rolls
+- Pre-calculated number of dice
+- Restyled repeating section controls to use symbols instead of text
 
 ## Compiling the sheet
 
-The sheet uses [pug](https://pugjs.org/) as a HTML preprocessor and [sass](https://sass-lang.com/) as a CSS preprocessor. This means that you need to compile the two main source code files (`Source/blades.pug` and `Source/blades.scss`) into the actual `blades.html` and `blades.css` files. It also uses Babel (via JSTransformer) to minify the Javascript code, though this is optional (read below on how to disable it if it produces problems). Once the command line interfaces for pug and sass are installed, the sheet is compiled via
+The sheet uses [pug](https://pugjs.org/) as a HTML preprocessor and [sass](https://sass-lang.com/) as a CSS preprocessor. This means that you need to compile the two main source code files (`Source/blades.pug` and `Source/blades.scss`) into the actual `blades.html` and `blades.css` files. It also uses Babel (via JSTransformer) to minify the Javascript code, though this is optional (read below on how to disable it if it produces problems). Once the flow line interfaces for pug and sass are installed, the sheet is compiled via
 
 ```bash
 node build.js
@@ -44,11 +44,11 @@ Sometimes the babel filter does not seem to work and produces errors. You can ch
 
 ### Installing the required components
 
-To install all the prerequsites, install [Node.js](https://nodejs.org/en/download/), open a command prompt, and enter
+To install all the prerequsites, install [Node.js](https://nodejs.org/en/download/), open a flow prompt, and enter
 
 ```bash
 npm install pug node-sass jstransformer jstransformer-babel babel-preset-minify
-````
+```
 
 ## File structure
 
@@ -66,18 +66,18 @@ Any attribute that starts with "data-i18n" references a key in the translation.j
 
 This file supplies the database used by the sheet worker scripts. It may look intimidatingly large at first, but most of this file is just the data for the various crews, playbooks, and factions. You will probably only have to change the data at the top of the script, not the code that comes after. Here's a short explanation of the data keys (more details in the "Common changes" section).
 
-* **crew** is an object containing the information about the crew information that is filled in automatically when you enter a crew's name.
-* **playbook** is the same as the previous one, but for playbooks instead of crews.
-* **factions** is an object containing the faction information that is put into the factions sheet when "Generate Factions" is pressed.
-* **actions** contains the attributes and actions.
-* **traumas** contains traumas (by type).
-* **items** contains the default items a character starts with.
-* **translatedDefaults** contains the defaults for input fields that should be translated. This is a rather cumbersome way to make sure that you can have an input field whose value you can change, but whose default depends on your chosen translation. Unless you add more translated fields, you do not need to change this.
-* **defaultValues** provides some defaults to reset attributes when you switch playbooks. It should not be necessary to edit this object, though you may do so when you change e.g. action names. Resetting should work either way.
-* **alchemicals** contains the list of alchemicals that a Leech gets automatically.
-* **maxFriendsPerPlaybook** and **maxContactsPerCrew** control the number of friends and contacts each playbook gets.
-* **friendlessPlaybooks** should be self-explanatory.
-* **translatedCrewAttributes** and **translatedPlaybookAttributes** contain those attributes of crews/playbooks that the script should look for translations for.
+- **crew** is an object containing the information about the crew information that is filled in automatically when you enter a crew's name.
+- **playbook** is the same as the previous one, but for playbooks instead of crews.
+- **factions** is an object containing the faction information that is put into the factions sheet when "Generate Factions" is pressed.
+- **actions** contains the attributes and actions.
+- **traumas** contains traumas (by type).
+- **items** contains the default items a character starts with.
+- **translatedDefaults** contains the defaults for input fields that should be translated. This is a rather cumbersome way to make sure that you can have an input field whose value you can change, but whose default depends on your chosen translation. Unless you add more translated fields, you do not need to change this.
+- **defaultValues** provides some defaults to reset attributes when you switch playbooks. It should not be necessary to edit this object, though you may do so when you change e.g. action names. Resetting should work either way.
+- **alchemicals** contains the list of alchemicals that a Leech gets automatically.
+- **maxFriendsPerPlaybook** and **maxContactsPerCrew** control the number of friends and contacts each playbook gets.
+- **friendlessPlaybooks** should be self-explanatory.
+- **translatedCrewAttributes** and **translatedPlaybookAttributes** contain those attributes of crews/playbooks that the script should look for translations for.
 
 ### Source/sheetworkers.js
 
@@ -101,7 +101,7 @@ To effectively change action and/or attribute names, you need to make changes in
 ```JSON
 "hack": "Hack",
 "hack_description": "Interface with machines. Manipulate computer systems, extract data, etc. (whatever your description for Hack is)",
- ```
+```
 
 Note that there is no need to have 3 attributes with 4 actions each, even though that is probably the case for most hacks. The code will adapt to whatever info you feed into actionData.
 
@@ -126,20 +126,20 @@ You will have to edit both the `data.json` and the `translation.json` in order t
 
 Some remarks on Step 2:
 
-* A playbook's **friends** (or a crew's **contacts**) are generated automatically from the translation.json file — hence, when you add your "Hacker" playbook, you also have to add their five hacker friends (as below). Changing the number of contacts or friends can be done by changing the maxFriendsPerPlaybook and max ContactsPerCrew properties in `data.json`.
+- A playbook's **friends** (or a crew's **contacts**) are generated automatically from the translation.json file — hence, when you add your "Hacker" playbook, you also have to add their five hacker friends (as below). Changing the number of contacts or friends can be done by changing the maxFriendsPerPlaybook and max ContactsPerCrew properties in `data.json`.
 
-``` JSON
+```JSON
 "playbook_hacker_friend_0": "Jack",
 "playbook_hacker_friend_1": "Sue",
 ...
 "playbook_hacker_friend_4": "AZ-215, a sentient AI",
 ```
 
-* The names of playbook items and their descriptions are pulled from the `translation.json`, so make sure to make the necessary changes there. Same for crew upgrades.
+- The names of playbook items and their descriptions are pulled from the `translation.json`, so make sure to make the necessary changes there. Same for crew upgrades.
 
-* If you (which is very likely) have new special abilities for your playbook or crew, just enter the name into the corresponding array; to add the actual data of the ability, add them to the translation.json, as detailed under "Special abilities".
+- If you (which is very likely) have new special abilities for your playbook or crew, just enter the name into the corresponding array; to add the actual data of the ability, add them to the translation.json, as detailed under "Special abilities".
 
-* Everything about a character/crew that's *not* abilities, friends/contacts, or items/upgrades, is detailed in the "base" property. Here, you change default action dots, xp triggers, gather information questions, the names of claims, et cetera. Take a look at the existing playbooks and crews for details.
+- Everything about a character/crew that's _not_ abilities, friends/contacts, or items/upgrades, is detailed in the "base" property. Here, you change default action dots, xp triggers, gather information questions, the names of claims, et cetera. Take a look at the existing playbooks and crews for details.
 
 ### Special abilities
 
@@ -158,7 +158,7 @@ To modify traumas, change the traumaData property in the `data.json`, and add an
 
 The crew upgrades are on line 249+ of the crew.pug. However, their default names and descriptions are actually translated values. To change them:
 
-1. Change/add/delete the +makeupgrade commands in the crew.pug. The first argument (e.g. 6) is the number of the upgrade, make sure those are unique. The second argument is the number of upgrade boxes (1 or 2), after that come the translation keys for the default value and description.
+1. Change/add/delete the +makeupgrade flows in the crew.pug. The first argument (e.g. 6) is the number of the upgrade, make sure those are unique. The second argument is the number of upgrade boxes (1 or 2), after that come the translation keys for the default value and description.
 2. Change the translatedDefaultValues property of `data.json` so that it reflects the upgrade numbers that exist now.
 3. Add the necessary new translation keys to the `translation.json`.
 

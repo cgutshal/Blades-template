@@ -522,11 +522,11 @@
         "move_3",
         "believe_in_me",
         "move_4",
-        "veteran"
+        "veteran",
         "disciple"
       ],
       "base": {
-        "command": "1",
+        "flow": "1",
         "friends_title": "playbook_hero_friends_title",
         "gatherinfo1": "gatherinfo_what_is_most",
         "gatherinfo2": "gatherinfo_who_is_feeling",
@@ -696,11 +696,11 @@
           "numboxes": "0"
         },
         {
-          "name": "playbook_item_bandolier_of_alchemicals_(3)",
+          "name": "playbook_item_bandolier_of_social_links_(3)",
           "numboxes": "1"
         },
         {
-          "name": "playbook_item_bandolier_of_alchemicals_(3)",
+          "name": "playbook_item_bandolier_of_social_links_(3)",
           "numboxes": "1"
         },
         {
@@ -723,7 +723,7 @@
       ],
       "base": {
         "friends_title": "playbook_lurk_friends_title",
-        "finesse": "1",
+        "express": "1",
         "gatherinfo1": "gatherinfo_who_here_is",
         "gatherinfo2": "gatherinfo_where_can_I_find",
         "gatherinfo3": "gatherinfo_what_should_I_look",
@@ -731,7 +731,7 @@
         "gatherinfo5": "gatherinfo_where_can_I_hide",
         "gatherinfo6": "gatherinfo_how_can_I_find",
         "playbook_description": "playbook_lurk_description",
-        "prowl": "2",
+        "defy": "2",
         "xp_condition": "playbook_lurk_xp_condition"
       },
       "playbookitem": [
@@ -777,7 +777,7 @@
       ],
       "base": {
         "friends_title": "playbook_slide_friends_title",
-        "consort": "1",
+        "analyse": "1",
         "gatherinfo1": "gatherinfo_who_here_is",
         "gatherinfo2": "gatherinfo_where_can_I_find",
         "gatherinfo3": "gatherinfo_what_are_your_needs",
@@ -831,7 +831,7 @@
         "veteran"
       ],
       "base": {
-        "consort": "2",
+        "analyse": "2",
         "friends_title": "playbook_spider_friends_title",
         "gatherinfo1": "gatherinfo_what_do_they_want",
         "gatherinfo2": "gatherinfo_what_should_I_look",
@@ -884,7 +884,7 @@
         "warded"
       ],
       "base": {
-        "attune": "2",
+        "conceal": "2",
         "friends_title": "playbook_whisper_friends_title",
         "gatherinfo1": "gatherinfo_what_is_arcane",
         "gatherinfo2": "gatherinfo_what_echoes",
@@ -1293,8 +1293,8 @@
   },
   "actions": {
     "moe": ["confess", "forgive", "perceive"],
-    "tsundere": ["finesse", "prowl", "defy"],
-    "kuudere": ["attune", "command", "consort"]
+    "tsundere": ["express", "defy", "empathise"],
+    "kuudere": ["conceal", "flow", "analyse"]
   },
   "traumas": {
     "normal": [
@@ -1477,7 +1477,7 @@
     "xp_condition3": "xp_vice"
   },
   "defaultValues": {
-    "attune": "0",
+    "conceal": "0",
     "claim_bridge_10_15": "1",
     "claim_bridge_12_13": "1",
     "claim_bridge_13_14": "1",
@@ -1490,11 +1490,11 @@
     "claim_bridge_9_14": "1",
     "cohort1_subtype": "",
     "cohort1_type": "gang",
-    "command": "0",
-    "consort": "0",
-    "finesse": "0",
+    "flow": "0",
+    "analyse": "0",
+    "express": "0",
     "confess": "0",
-    "prowl": "0",
+    "defy": "0",
     "setting_extra_stress": "0",
     "setting_load_h": "6",
     "setting_show_deity": "0",

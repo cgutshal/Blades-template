@@ -1397,7 +1397,7 @@ input.sheet-tooth {
 }
 .sheet-tooth:checked ~ .sheet-xptooth + span {
   //background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png");
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png");
+  background-image: url("https://raw.githubusercontent.com/cgutshal/Blades-template/master/Assets/xpmoon-logo.png");
 }
 .sheet-stresstooth[type="radio"] + span,
 .sheet-stresstooth[type="checkbox"]:checked + span,
@@ -2401,7 +2401,7 @@ input[value="1"] + .sheet-claimbox {
     content: ":";
   }
 }
-/* ALCHEMICALS */
+/* alchemicals */
 .sheet-title-checkbox ~ div {
   height: auto;
   transition: all 0.2s;
