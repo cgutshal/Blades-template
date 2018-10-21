@@ -515,15 +515,15 @@
   "playbook": {
     "hero": {
       "ability": [
-        "battleborn",
-        "bodyguard",
-        "ghost_fighter",
-        "leader",
-        "mule",
-        "not_to_be_trifled_with",
-        "savage",
-        "vigorous",
+        "only_mortal",
+        "heros_destiny",
+        "worth_saving",
+        "move_2",
+        "move_3",
+        "believe_in_me",
+        "move_4",
         "veteran"
+        "disciple"
       ],
       "base": {
         "command": "1",
@@ -538,34 +538,7 @@
         "skirmish": "2",
         "xp_condition": "playbook_hero_xp_condition"
       },
-      "playbookitem": [
-        {
-          "bold": "1",
-          "name": "playbook_item_fine_hand_weapon",
-          "numboxes": "1"
-        },
-        {
-          "bold": "1",
-          "name": "playbook_item_fine_heavy_weapon",
-          "numboxes": "2"
-        },
-        {
-          "name": "playbook_item_scary_weapon_or_tool",
-          "numboxes": "1"
-        },
-        {
-          "name": "playbook_item_manacles_&_chain",
-          "numboxes": "0"
-        },
-        {
-          "name": "playbook_item_rage_essence_vial",
-          "numboxes": "0"
-        },
-        {
-          "name": "playbook_item_spiritbane_charm",
-          "numboxes": "0"
-        }
-      ]
+      "playbookitem": []
     },
     "ghost": {
       "ability": [
